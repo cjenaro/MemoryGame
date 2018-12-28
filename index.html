@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Memory Game!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu Mono' rel='stylesheet'>
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+
+    <div class="total">
+
+      <!-- Title, rating, moves and button -->
+
+      <div class="text-container">
+
+        <!-- Title -->
+
+        <div class="title">
+          <h1>Memory Game!</h1>
+        </div>
+
+        <!-- rating, moves and button -->
+
+        <div class="accesories">
+          <div class="stars-moves">
+            <div id="stars-container" class="stars">
+              <img width="32px" height="32px" class="star" src="img/star.png" alt="stars">
+              <img width="32px" height="32px" class="star" src="img/star.png" alt="stars">
+              <img width="32px" height="32px" class="star" src="img/star.png" alt="stars">
+            </div>
+          <div class="moves">
+            <p id="moves"></p>
+          </div>
+          </div>
+          <div class="restart">
+            <input class="restart-button" type="image" src="img/restart-button.png" />
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Game container -->
+
+      <div id="main-container" class="flex main-container">
+
+      </div>
+
+      <!-- The Modal -->
+      <div id="modalId" class="modal">
+
+        <!-- Modal content -->
+        <div id="modalContentId" class="modal-content">
+          <div class="close-row">
+            <span class="close">&times;</span>
+          </div>
+          <div class="game-finished">
+            <p></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script src="js/app.js" charset="utf-8"></script>
+  </body>
+</html>
