@@ -6,16 +6,30 @@ let images = ['birthday-cake', 'christmas-tree', 'mother-christmas',
               'mother-christmas', 'deer', 'father-christmas', 'snowman',
               'wrapped-present', 'snowflake'];
 
+let resetButton = document.getElementsByClassName('restart-button')[0];
+
+resetButton.addEventListener('click', function(event) {
+  resetGame();
+})
+
 let currentCards = [];
 let documentFragment = document.createDocumentFragment();
 let intervalId;
 let count = 0;
 let moves = 0;
+let time = 0;
 let modal = document.getElementById('modalId');
 let close = document.getElementsByClassName('close')[0];
 close.addEventListener('click', function() {
   modal.style.display = 'none';
 });
+
+setInterval(function() {
+  time++;
+  document.getElementById('timer').innerText = 'Seconds: ' + time;
+}, 1000);
+
+
 
 shuffle(images);
 
@@ -54,7 +68,6 @@ function shuffle(a) {
 
 function flipCard(event) {
   var div = event.target;
-  showModalView();
   if (div.className == 'card')
   {
     updateMoves();
@@ -223,7 +236,8 @@ function showModalView() {
 
   let modalParagraph = document.getElementsByClassName('game-finished')[0];
 
-  modalParagraph.firstElementChild.innerText = 'Game finished in ' + moves + ' moves';
+  modalParagraph.getElementsByTagName('p')[0].innerText = 'Game finished in ' + moves +
+  ' moves and ' + (time/60) + ' minutes';
 
   modal.style.display = 'flex';
 }
@@ -235,4 +249,8 @@ function checkIfExistsAndRemove(modalContent)
   {
     modalContent.removeChild(starsContainer);
   }
+}
+
+function resetGame() {
+  location.reload();
 }

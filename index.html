@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu Mono' rel='stylesheet'>
     <link rel="stylesheet" href="css/master.css">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 800px)" href="css/master800.css" /> -->
   </head>
   <body>
 
@@ -24,15 +25,16 @@
         <!-- rating, moves and button -->
 
         <div class="accesories">
-          <div class="stars-moves">
-            <div id="stars-container" class="stars">
-              <img width="32px" height="32px" class="star" src="img/star.png" alt="stars">
-              <img width="32px" height="32px" class="star" src="img/star.png" alt="stars">
-              <img width="32px" height="32px" class="star" src="img/star.png" alt="stars">
+          <div id="stars-container" class="stars">
+            <img width="15px" height="15px" class="star" src="img/star.png" alt="stars">
+            <img width="15px" height="15px" class="star" src="img/star.png" alt="stars">
+            <img width="15px" height="15px" class="star" src="img/star.png" alt="stars">
             </div>
           <div class="moves">
             <p id="moves"></p>
           </div>
+          <div class="timer">
+            <p id="timer">Timer</p>
           </div>
           <div class="restart">
             <input class="restart-button" type="image" src="img/restart-button.png" />
@@ -56,7 +58,8 @@
             <span class="close">&times;</span>
           </div>
           <div class="game-finished">
-            <p></p>
+            <button class="play-again" onclick="resetGame()" type="button" name="button">Play again!</button>
+            <p class="finished-text"></p>
           </div>
         </div>
 
