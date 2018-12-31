@@ -14,3 +14,19 @@ https://icons8.com/ (stars for the rating)
 
 ## Comments
 The game was overall pretty easy to make but it was still very fun, animations where a little bit of a pain.
+
+## Open Game
+
+To open the game you need to clone the github repo and simply open index.html with any browser.
+
+## Playing the Game
+
+Just click in any card to flip it! If the two images match the cards stay flipped, otherwise they go back to the starting position
+
+## Dependencies
+
+For this project I am not using any dependencies, just my own CSS, HTML and JavaScript
+
+## Screenshot
+
+[Screenshot](img/screenshot.png)
