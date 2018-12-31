@@ -24,7 +24,7 @@ close.addEventListener('click', function() {
   modal.style.display = 'none';
 });
 
-setInterval(function() {
+let timerInterval = setInterval(function() {
   time++;
   document.getElementById('timer').innerText = 'Seconds: ' + time;
 }, 1000);
@@ -41,7 +41,7 @@ for (let img of images)
 
   let newDiv = document.createElement('div');
   newDiv.className = 'card';
-  newDiv.addEventListener('click', function() {
+  newDiv.addEventListener('click', function(event) {
     flipCard(event);
   });
 
@@ -196,13 +196,7 @@ function updateMoves()
   let starsContainer = document.getElementById('stars-container');
   let stars = starsContainer.getElementsByTagName('img');
 
-  if (moves > 29)
-  {
-    stars[0].style = 'display: none';
-  } else if (moves > 24)
-  {
-    stars[0].src = 'img/star-half.png';
-  } else if (moves > 19)
+  if (moves > 19)
   {
     stars[1].style = 'display: none';
   } else if (moves > 14)
@@ -240,6 +234,7 @@ function showModalView() {
   ' moves and ' + (time/60) + ' minutes';
 
   modal.style.display = 'flex';
+  clearInterval(timerInterval);
 }
 
 function checkIfExistsAndRemove(modalContent)
