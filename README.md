@@ -25,8 +25,7 @@ Just click in any card to flip it! If the two images match the cards stay flippe
 
 ## Dependencies
 
-For this project I am not using any dependencies, just my own CSS, HTML and JavaScript
-
+For this project I only used a Google Font dependency.
 ## Screenshot
 
 [Screenshot](https://imgur.com/o5bSCMo)
