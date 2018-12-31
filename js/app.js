@@ -68,7 +68,7 @@ function shuffle(a) {
 
 function flipCard(event) {
   var div = event.target;
-  if (div.className == 'card')
+  if (div.className == 'card' && !currentCards.includes(div))
   {
     updateMoves();
     flipAnimation(div);
