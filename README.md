@@ -29,4 +29,4 @@ For this project I am not using any dependencies, just my own CSS, HTML and Java
 
 ## Screenshot
 
-[Screenshot](img/screenshot.png)
+[Screenshot](https://imgur.com/o5bSCMo)
